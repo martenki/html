@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML h10</title>
+</head>
+<body>
+    <h1>ÕPILASE REGISTREERIMISVORM</h1>
+    <form action="/submit_page" method="get">
+    <fieldset>
+        <legend>Isikuandmed</legend>
+        <label for="kasutaja">Eesnimi </label><br>
+        <input name="kasutaja" type="text" placeholder="Marten" maxlength="30" required><br>
+    <br>
+        <label for="kasutaja">Perenimi </label><br>
+        <input name="kasutaja" type="text" placeholder="Kiisa" maxlength="30" required><br>
+    <br>
+        <input type="radio" name="tuba" value="Naine"> Naine
+        <input type="radio" name="tuba" value="Mees" checked> Mees
+        <input type="radio" name="tuba" value="Sootu" checked> Sootu <br>
+    <br>
+
+        <input type="date" min="1950-01-01" max="2025-12-31" value="1980-01-01" required><br>
+    </fieldset>
+    <fieldset>
+        <legend>KONTAKT</legend>
+        <label for="email">E-post: </label><br>
+        <input id="email" type="email" placeholder="nimi@kool.ee" maxlenght="100" required><br>
+    <br>
+        <label for="tel">Mobiiltelefon </label><br>
+        <input type="tel" pattern="\+372\s?\d{7,8}$" placeholder="+372 23452523" required><br>
+    <br>
+        <label for="Aadress">Aadress </label><br>
+        <textarea name="Aadress" rows="4" cols="30" placeholder="Tänav, maja, korter"></textarea><br>
+    <br>
+        <label for="Linn">Linna / asula </label><br>
+        <input name="kasutaja" type="text" placeholder="Tallinn" maxlength="30" required><br>
+        <br>
+        <label for="Post">Postiindeks </label><br>
+        <input name="kasutaja" type="text" placeholder="10111" maxlength="5" pattern="^\d{5}$" required><br>
+    <br>
+        <label for="Riik">Riik </label><br>
+        <input name="Riik" type="text" placeholder="Eesti" readonly><br>
+    </fieldset>
+    <fieldset>
+        <legend>Muu Info</legend>
+        <label for="Huvialad">Huvialad </label><br>
+        <input type="checkbox" name="Laulmine"> Laulmine
+        <input type="checkbox" name="Joonistamine"> Joonistamine
+        <input type="checkbox" name="Tantsimine"> Tantsimine
+        <input type="checkbox" name="kokkamine"> Kokkamine
+        <input type="checkbox" name="Muu"> Muu <input type="text" placeholder="Täpsusta" maxlenght="30"><br>
+    <br>
+        <label for="Isiklik veebileht">Isiklik veebileht </label><br>
+        <input name="veebileht" type="url" placeholder="https://minuleht.ee" accept="https://"><br>
+        <br>
+        <label for="Eelistatud värv">Eelistatud värv </label><br>
+        <input type="color" value="#0047AB"><br>
+    <br>
+        <label for="Dokumendid">Dokumendid (PDF või pildid)</label><br>
+        <input type="file" accept="image/*,.PDF"><br>
+    </fieldset>
+    <fieldset>
+        <legend>Nõistamine</legend>
+        <input type="checkbox" name="Nõustun" Required> Kinnitan, et esitatud andmed on õiged ja luban nende töötlemist vastavalt kooli tingimustele.
+    </fieldset>
+    <input type="submit" value="saada">
+    <input type="reset" value="tühjenda">
+</form>
+</body>
+</html>

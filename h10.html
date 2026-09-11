@@ -3,69 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML h10</title>
+    <title>Õpilase registreerimisvorm</title>
+    <!-- Bootstrap 5 CSS link -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
 </head>
-<body>
-    <h1>ÕPILASE REGISTREERIMISVORM</h1>
-    <form action="/submit_page" method="get">
-    <fieldset>
-        <legend>Isikuandmed</legend>
-        <label for="eesnimi">Eesnimi </label><br>
-        <input name="eesnimi" id="eesnimi" type="text" placeholder="Marten" maxlength="30" required><br>
-    <br>
-        <label for="perenimi">Perenimi </label><br>
-        <input name="perenimi" id="perenimi" type="text" placeholder="Kiisa" maxlength="30" required><br>
-    <br>
-        <input type="radio" name="tuba" value="Naine"> Naine
-        <input type="radio" name="tuba" value="Mees" checked> Mees
-        <input type="radio" name="tuba" value="Sootu" checked> Sootu <br>
-    <br>
+<body class="bg-light py-5">
 
-        <input type="date" min="1950-01-01" max="2025-12-31" value="1980-01-01" required><br>
-    </fieldset>
-    <fieldset>
-        <legend>KONTAKT</legend>
-        <label for="email">E-post: </label><br>
-        <input id="email" type="email" placeholder="nimi@kool.ee" maxlength="100" required><br>
-    <br>
-        <label for="tel">Mobiiltelefon </label><br>
-        <input type="tel" id="tel" pattern="\+372\s?\d{7,8}$" placeholder="+372 23452523" required><br>
-    <br>
-        <label for="aadress">Aadress </label><br>
-        <textarea name="aadress" id="aadress" rows="4" cols="30" placeholder="Tänav, maja, korter"></textarea><br>
-    <br>
-        <label for="linn">Linna / asula </label><br>
-        <input name="linn" id="linn" type="text" placeholder="Tallinn" maxlength="30" required><br>
-        <br>
-        <label for="postkast">Postiindeks </label><br>
-        <input name="postkast" id="postkast" type="text" placeholder="10111" maxlength="5" pattern="^\d{5}$" required><br>
-    <br>
-        <label for="riik">Riik </label><br>
-        <input name="riik" id="riik" type="text" placeholder="Eesti" readonly><br>
-    </fieldset>
-    <fieldset>
-        <legend>Muu Info</legend>
-        <label for="huvialad">Huvialad </label><br>
-        <input type="checkbox" name="Laulmine"> Laulmine
-        <input type="checkbox" name="Joonistamine"> Joonistamine
-        <input type="checkbox" name="Tantsimine"> Tantsimine
-        <input type="checkbox" name="kokkamine"> Kokkamine
-        <input type="checkbox" name="Muu"> Muu <input type="text" id="huvialad" placeholder="Täpsusta" maxlength="30"><br>
-    <br>
-        <label for="isiklikveebileht">Isiklik veebileht </label><br>
-        <input name="isiklikveebileht" id="isiklikveebileht" type="url" placeholder="https://minuleht.ee" pattern="https://"><br>
-        <br>
-        <label for="eelistatud-varv">Eelistatud värv </label><br>
-        <input type="color" id="eelistatud-varv" value="#0047AB"><br>
-    <br>
-        <label for="dokumendid">Dokumendid (PDF või pildid)</label><br>
-        <input type="file" id="dokumendid" accept="image/*,.PDF"><br>
-    </fieldset>
-    <fieldset>
-        <legend>Nõistamine</legend>
-        <input type="checkbox" name="Nõustun" Required> Kinnitan, et esitatud andmed on õiged ja luban nende töötlemist vastavalt kooli tingimustele.
-    </fieldset>
-    <input type="submit" value="saada">
-    <input type="reset" value="tühjenda">
-</form>
-</body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <h1 class="h3 text-center mb-4 text-primary text-uppercase fw-bold">Õpilase registreerimisvorm</h1>
+                    
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        
+                        <!-- isikuandmed -->
+                        <fieldset class="mb-4">
+                            <legend class="h5 text-secondary border-bottom pb-2 mb-3">Isikuandmed</legend>
+                            
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label for="eesnimi" class="form-label">Eesnimi</label><br>
+                                    <input type="text" class="form-control" id="eesnimi" name="eesnimi" required><br>
+                                    <br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="perenimi" class="form-label">Perenimi</label><br>
+                                    <input type="text" class="form-control" id="perenimi" name="perenimi" required><br>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">Sugu</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sugu" id="sugu-naine" value="naine">
+                                    <label class="form-check-label" for="sugu-naine">Naine</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sugu" id="sugu-mees" value="mees" checked>
+                                    <label class="form-check-label" for="sugu-mees">Mees</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sugu" id="sugu-sootu" value="sootu">
+                                    <label class="form-check-label" for="sugu-sootu">Sootu</label><br>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 col-md-6">
+                                <label for="sunniaeg" class="form-label">Sünnikuupäev</label>
+                                <input type="date" class="form-control" id="sunniaeg" name="sunniaeg" value="1980-01-01">
+                            </div>
+                        </fieldset>
+
+                        <!-- Kontaktid -->
+                        <fieldset class="mb-4">
+                            <legend class="h5 text-secondary border-bottom pb-2 mb-3">Kontakt</legend>
+                            
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label for="epost" class="form-label">E-post</label><br>
+                                    <input type="email" class="form-control" id="epost" name="epost" placeholder="nimi@eesmärk.ee" required><br>
+                                    <br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="telefon" class="form-label">Mobiiltelefon</label><br>
+                                    <input type="tel" class="form-control" id="telefon" name="telefon"><br>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="aadress" class="form-label">Aadress</label><br>
+                                <input type="text" class="form-control" id="aadress" name="aadress"><br>
+                                <br>
+                            </div>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label for="linn" class="form-label">Linna / asula</label><br>
+                                    <input type="text" class="form-control" id="linn" name="linn"><br>
+                                    <br>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="postiindeks" class="form-label">Postiindeks</label><br>
+                                    <input type="text" class="form-control" id="postiindeks" name="postiindeks"><br>
+                                    <br>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="riik" class="form-label">Riik</label><br>
+                                    <input type="text" class="form-control" id="riik" name="riik"><br>
+                                    <br>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- muu info -->
+                        <fieldset class="mb-4">
+                            <legend class="h5 text-secondary border-bottom pb-2 mb-3">Muu info</legend>
+                            
+                            <div class="mb-3">
+                                <label class="form-label d-block">Huvialad</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="huvialad[]" id="huviala-laulmine" value="laulmine">
+                                    <label class="form-check-label" for="huviala-laulmine">Laulmine</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="huvialad[]" id="huviala-joonistamine" value="joonistamine">
+                                    <label class="form-check-label" for="huviala-joonistamine">Joonistamine</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="huvialad[]" id="huviala-tantsimine" value="tantsimine">
+                                    <label class="form-check-label" for="huviala-tantsimine">Tantsimine</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="huvialad[]" id="huviala-kokkamine" value="kokkamine">
+                                    <label class="form-check-label" for="huviala-kokkamine">Kokkamine</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="huvialad[]" id="huviala-muu" value="muu">
+                                    <label class="form-check-label" for="huviala-muu">Muu</label><br>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-3 align-items-end">
+                                <div class="col-md-9">
+                                    <label for="veebileht" class="form-label">Isiklik veebileht</label><br>
+                                    <input type="url" class="form-control" id="veebileht" name="veebileht" placeholder="https://example.com"><br>
+                                    <br>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="varv" class="form-label">Eelistatud värv</label><br>
+                                    <input type="color" class="form-control form-control-color w-100" id="varv" name="varv" value="#0047AB" title="Vali eelistatud värv"><br>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="dokumendid" class="form-label">Dokumendid (PDF või pildid)</label><br>
+                                <input class="form-control" type="file" id="dokumendid" name="dokumendid" accept=".pdf, image/*" multiple>
+                            </div>
+                        </fieldset>
+
+                        <!-- nõustamine -->
+                        <div class="mb-4 border p-3 rounded bg-light">
+                            <h3 class="fw-bold">Nõustumine</h3>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="noustumine" name="noustumine" required>
+                                <label class="form-check-label small" for="noustumine">
+                                    Kinnitan, et esitatud andmed on õiged ja luban nende töötlemist vastavalt kooli tingimustele.<br>
+                                    <br>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 justify-content-end">
+                            <button type="reset" class="btn btn-outline-secondary px-4">Tühjenda</button>
+                            <button type="submit" class="btn btn-primary px-4">Saada</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -14,7 +14,7 @@
         <input name="eesnimi" id="eesnimi" type="text" placeholder="Marten" maxlength="30" required><br>
     <br>
         <label for="perenimi">Perenimi </label><br>
-        <input name="kasutaja" type="text" placeholder="Kiisa" maxlength="30" required><br>
+        <input name="perenimi" id="perenimi" type="text" placeholder="Kiisa" maxlength="30" required><br>
     <br>
         <input type="radio" name="tuba" value="Naine"> Naine
         <input type="radio" name="tuba" value="Mees" checked> Mees
@@ -28,38 +28,38 @@
         <label for="email">E-post: </label><br>
         <input id="email" type="email" placeholder="nimi@kool.ee" maxlength="100" required><br>
     <br>
-        <label for="mobiilinumber">Mobiiltelefon </label><br>
-        <input type="tel" pattern="\+372\s?\d{7,8}$" placeholder="+372 23452523" required><br>
+        <label for="tel">Mobiiltelefon </label><br>
+        <input type="tel" id="tel" pattern="\+372\s?\d{7,8}$" placeholder="+372 23452523" required><br>
     <br>
         <label for="aadress">Aadress </label><br>
-        <textarea name="Aadress" rows="4" cols="30" placeholder="Tänav, maja, korter"></textarea><br>
+        <textarea name="aadress" id="aadress" rows="4" cols="30" placeholder="Tänav, maja, korter"></textarea><br>
     <br>
         <label for="linn">Linna / asula </label><br>
-        <input name="kasutaja" type="text" placeholder="Tallinn" maxlength="30" required><br>
+        <input name="linn" id="linn" type="text" placeholder="Tallinn" maxlength="30" required><br>
         <br>
-        <label for="Post">Postiindeks </label><br>
-        <input name="Postkast" type="text" placeholder="10111" maxlength="5" pattern="^\d{5}$" required><br>
+        <label for="postkast">Postiindeks </label><br>
+        <input name="postkast" id="postkast" type="text" placeholder="10111" maxlength="5" pattern="^\d{5}$" required><br>
     <br>
-        <label for="Riik">Riik </label><br>
-        <input name="Riik" type="text" placeholder="Eesti" readonly><br>
+        <label for="riik">Riik </label><br>
+        <input name="riik" id="riik" type="text" placeholder="Eesti" readonly><br>
     </fieldset>
     <fieldset>
         <legend>Muu Info</legend>
-        <label for="Huvialad">Huvialad </label><br>
+        <label for="huvialad">Huvialad </label><br>
         <input type="checkbox" name="Laulmine"> Laulmine
         <input type="checkbox" name="Joonistamine"> Joonistamine
         <input type="checkbox" name="Tantsimine"> Tantsimine
         <input type="checkbox" name="kokkamine"> Kokkamine
-        <input type="checkbox" name="Muu"> Muu <input type="text" placeholder="Täpsusta" maxlength="30"><br>
+        <input type="checkbox" name="Muu"> Muu <input type="text" id="huvialad" placeholder="Täpsusta" maxlength="30"><br>
     <br>
         <label for="isiklikveebileht">Isiklik veebileht </label><br>
-        <input name="veebileht" type="url" placeholder="https://minuleht.ee" pattern="https://"><br>
+        <input name="isiklikveebileht" id="isiklikveebileht" type="url" placeholder="https://minuleht.ee" pattern="https://"><br>
         <br>
-        <label for="Eelistatud-varv">Eelistatud värv </label><br>
-        <input type="color" value="#0047AB"><br>
+        <label for="eelistatud-varv">Eelistatud värv </label><br>
+        <input type="color" id="eelistatud-varv" value="#0047AB"><br>
     <br>
-        <label for="Dokumendid">Dokumendid (PDF või pildid)</label><br>
-        <input type="file" accept="image/*,.PDF"><br>
+        <label for="dokumendid">Dokumendid (PDF või pildid)</label><br>
+        <input type="file" id="dokumendid" accept="image/*,.PDF"><br>
     </fieldset>
     <fieldset>
         <legend>Nõistamine</legend>
